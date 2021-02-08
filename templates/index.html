@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='style.css') }} />
+        
+        <style>
+                body {
+                      background-image: url('https://cdn57.androidauthority.net/wp-content/uploads/2019/09/OnePlus-7T-music-playback-spotify.jpg');
+
+                    }
+        </style>
+    </head>
+    
+   <title>Welcome to Spotify!</title>
+    
+    <body>
+        
+        <h1>
+            <marquee><b><u><font size="45" | color="ffd166">
+            Akshay's Favourite Music Artists
+            </b></u></font></marquee>
+        </h1>
+        
+        <h2><font size="12" | color= "cdb4db">Random Artist selected from below list: </font> </h2>
+        
+        <h2>
+            <ul><font color="#87f2ac">
+                <li>Arijit Singh</li>
+                <li>Salim Merchant</li>
+                <li>Harshdeep Kaur</li>
+                <li>Shreya Ghoshal</li>
+                <li>Neha Kakkar</li>
+                </font>
+            </ul>
+        
+         </h2>
+        
+        <h1>
+            <font size="26" | color="cdb4db"> Top ten songs of <b>"{{artistName}}":
+            <img src={{artistImg}} class="artist" width= "250" height="250" style="float:right" />
+            </b></font>
+             
+        </h1>
+        
+         
+        
+                
+        <h2>
+            {%for i in range(0, tracksLen)%} 
+                <ul>
+                    <li><font size= "24" | color="#F20056">
+                        {{tracks[i]['name']}}
+                        <img src= {{tracks[i]["album"]["images"][0]["url"]}} width="100" height="100" style="float:center"  />
+                        <audio 
+                                controls src={{tracks[i]['preview_url']}}
+                                <code>audio</code>element.
+                        </audio>
+                    </li></font>
+                </ul>
+                
+            {%endfor%} 
+            
+        </h2>
+       
+        
+    </body>
+</html>
