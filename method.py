@@ -43,9 +43,6 @@ def getPath(track, artist):
     
     #Concatenation and replace white space with '%20'
     search = (track + artist).replace(" ", "%20")   
-    # print()
-    # print (search)
-    # print()
     
     songInfo = requests.get("http://api.genius.com/search?q=" + search, headers=headers).json()
    
@@ -56,8 +53,6 @@ def getPath(track, artist):
         path= track['response']["song"]["path"]
         # print()
         # print(path)
-        # print()
-        
         return path
     
     except: 
