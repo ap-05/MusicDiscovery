@@ -36,13 +36,14 @@ def getTracks(rand_id):
 
 #genius api for song lyrics   
 
-def getPath(track, artist):
+def getLyrics(track, artist):
     headers = {
         'Authorization': 'Bearer {token}'.format(token=os.getenv('genius_token')),
     }
     
+    #split the track string when hit "(" and "-" and return first element
     #Concatenation and replace white space with '%20'
-    search = (track + artist).replace(" ", "%20")   
+    search = (track.split("(")[0].split("-")[0] + artist).replace(" ", "%20")   
     
     songInfo = requests.get("http://api.genius.com/search?q=" + search, headers=headers).json()
    
@@ -53,6 +54,7 @@ def getPath(track, artist):
         path= track['response']["song"]["path"]
         # print()
         # print(path)
+        
         return path
     
     except: 

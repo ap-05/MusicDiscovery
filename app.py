@@ -3,7 +3,7 @@ import os
 import requests
 import json
 import random
-from method import getToken, getArtistInfo, getTracks , getPath 
+from method import getToken, getArtistInfo, getTracks , getLyrics 
 from test_data import gettestArtistInfo, gettestTracks
 from dotenv import load_dotenv, find_dotenv
 
@@ -34,7 +34,7 @@ def index():
         
     lyrics = []
     for track in trackList:
-        lyrics.append("http://genius.com" + getPath(track['name'], artistInfo["name"]))
+        lyrics.append("http://genius.com" + getLyrics(track['name'], artistInfo["name"]))
     
     #returning index.html
     return render_template(
