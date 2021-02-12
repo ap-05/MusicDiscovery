@@ -3,12 +3,16 @@
 CS490_Project1
 
 ##Introduction: 
-The Spotify API allows you to fetch a ton of info, including your liked track and albums, song previews. It requires an authentication for the API as developer.
 
-##Getting an authentication token: First, we need to sign up for spotify developer https://developer.spotify.com/dashboard/login .Second, we also need to sign up for genius developer https://genius.com/developers. Then registered your app name and generate your spotify and genius API to obtain an access_token and a sceret_key. Keep both of them safe, as we need them for later use.
+        The Spotify API allows you to fetch a ton of info, including your liked track and albums, song previews. It requires an authentication for the API as developer.
+
+##Getting an authentication token:
+        
+        First, we need to sign up for spotify developer https://developer.spotify.com/dashboard/login .Second, we also need to sign up for genius developer         https://genius.com/developers. Then registered your app name and generate your spotify and genius API to obtain an access_token and a sceret_key. Keep both of them safe, as we need them for later use.
 
 ##Tools / Frameworks Used
-Currently, the following tools and frameworks are being used for development. These may be subject to change as the project progresses.
+
+    Currently, the following tools and frameworks are being used for development. These may be subject to change as the project progresses.
 
     Flask 
     Spotify API
