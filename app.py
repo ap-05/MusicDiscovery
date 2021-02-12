@@ -17,7 +17,7 @@ app = Flask(__name__)
 def index():
 
     #Artist ID from spotify 
-    artists=["4YRxDV8wJFPHPTeXepOstw", "3xU8YsNNkmWSPewlB18NUz", "5f4QpKfy7ptCHwTqspnSJI","2DlGxzQSjYe5N6G9nkYghR","6vWDO969PvNqNYHIOW5v0m",""]
+    artists=["4YRxDV8wJFPHPTeXepOstw", "3xU8YsNNkmWSPewlB18NUz", "5f4QpKfy7ptCHwTqspnSJI","6vWDO969PvNqNYHIOW5v0m"]
     rand_id = random.choice(artists)
     
     try: 
@@ -34,7 +34,7 @@ def index():
         
     lyrics = []
     for track in trackList:
-        lyrics.append("http://genius.com" + getLyrics(track['name'], artistInfo["name"]))
+        lyrics.append("http://genius.com" + getLyrics(track["name"], artistInfo["name"]))
     
     #returning index.html
     return render_template(
