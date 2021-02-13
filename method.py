@@ -58,5 +58,5 @@ def getLyrics(track, artist):
         return path
     
     except: 
-        return "Lyrics not found!!!"
+        return "/Lyrics%20not%20found!!!"
     
